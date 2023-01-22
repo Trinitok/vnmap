@@ -31,7 +31,7 @@ You should be able to run the integration tests which just do a simple scan agai
 ## NMap Runner
 This uses a builder pattern in order to run the installed version of nmap.  Below is an example of running nmap using this library
 ```
-import nmap_runner
+import trinitok.vnmap.nmap_runner
 
 target_url := 'scanme.nmap.org'
 test_output_xml_filename := 'test_full_run.xml'
@@ -49,7 +49,7 @@ This wrapper runner outputs the nmap scan in a local xml file and then attempts 
 
 If you have a local xml file for nmap already, you can instead feed that into the parser and it will return an nmap object
 ```
-import nmap_xml_result_parser
+import trinitok.vnmap.nmap_xml_result_parser
 
 nmap_out := nmap_xml_result_parser.parse_nmap_xml_from_file('nmap_out.xml')
 

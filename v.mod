@@ -1,5 +1,5 @@
 Module {
-	name: 'v_nmap'
+	name: 'vnmap'
 	description: 'NMap Runner and XML Output Parser in VLang!'
 	version: '0.0.1'
 	license: 'MIT'

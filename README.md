@@ -20,7 +20,7 @@ I currently use vxml from walkingdevel in order to parse the NMap XML output
 1. Install V
     1. https://github.com/vlang/v#installing-v-from-source
 1. Install using vpm
-> v install Trinitok.v_nmap
+> v install Trinitok.vnmap
 4.  In case it is not installed, 
 
 # Verifying

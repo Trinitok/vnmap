@@ -21,7 +21,8 @@ I currently use vxml from walkingdevel in order to parse the NMap XML output
     1. https://github.com/vlang/v#installing-v-from-source
 1. Install using vpm
 > v install Trinitok.vnmap
-4.  In case it is not installed, 
+4.  In case it is not installed, please also install the required xml parsing library
+> v install walkingdevel.vxml
 
 # Verifying
 You should be able to run the integration tests which just do a simple scan against `scanme.nmap.org` which is a website authorized by nmap to scan against.

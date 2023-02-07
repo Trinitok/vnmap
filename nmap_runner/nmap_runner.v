@@ -62,28 +62,7 @@ pub fn (mut runner NMapRunner) set_xml_output_name(xml_filename string) {
 
 // adds -sS
 pub fn (mut runner NMapRunner) add_stealth_scan_flag() {
-	runner.command = runner.command + '-sS'
-
-	// urllib.parse(target) or {
-	// 	println('error parsing target ${} in urllib parse')
-	// }
-	// // valid_ip := net.parse_ip(target)
-	// // print(valid_ip)
-	// net.listen_tcp(.ip, target) or {
-	// 	println(err)
-	// 	println('there was an error with listen')
-	// }
-	// conn := net.dial_tcp(target) or {
-	// 	println(err)
-	// 	println('The target at IP ${target} is not reachable')
-	// 	exit(1)
-	// }
-
-	// println(conn)
-
-	// return nmap_xml_result_parser.NMap {
-
-	// }
+	runner.command = runner.command + ' -sS'
 }
 
 // adds -O

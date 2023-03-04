@@ -1,6 +1,12 @@
 # What is this?
 It is an unofficial wrapper for [NMap](https://nmap.org/) written in [V Lang](https://vlang.io/).  I wrote it to help automate and make some interactions with security capture the flag events more automatable.
 
+# Working V and NMap Versions
+Because V is still kinda sorta unstable and Nmap can change as time goes on, I wanted to have a chart here to demonstrate the current working versions this has been tested on
+| Vlang | Nmap |
+| ---- | ---- |
+| V 0.3.3 1a48d08, timestamp: 2023-03-04 14:59:00 +0200 | 7.93 |
+
 # Legal Disclaimer
 This is an unofficial wrapper library for NMap.  Any illegal use of this wrapper is not the fault of the person using this library.  Please be sure to obtain all appropriate permissions prior to use.
 

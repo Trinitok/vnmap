@@ -15,7 +15,7 @@ fn test_scanning_url_and_parsing_output() {
 
 fn test_scanning_url_with_ports() {
 	target_url := 'scanme.nmap.org'
-	test_output_xml_filename := 'test_full_run.xml'
+	test_output_xml_filename := 'test_web_server_run.xml'
 	test_ports := [80,443,8080]
 
 	mut runner := nmap_runner.NMapRunner{}

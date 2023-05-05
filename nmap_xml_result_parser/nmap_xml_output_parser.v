@@ -151,10 +151,19 @@ fn (mut nmap_instance NMap) parse_nmaprun_meta(nmaprun_meta vxml.Node) {
 		else if child_node.name == 'runstats' {
 			nmap_instance.runstats = parse_runstats(child_node)
 		}
+		else if child_node.name == 'hosthint' {
+			parse_hosthint(child_node)
+		}
 		else {
 			println('here is an unexpected nmaprun child element name: ${child_node.name}')
 		}
 	}
+}
+
+fn parse_hosthint(xml_node vxml.Node) {
+	// NMap hosthint is currently being omitted at this time
+
+	// println('Here is the hosthint node: ${xml_node}')
 }
 
 fn parse_runstats(xml_node vxml.Node) NmapRunStatsNode {
@@ -239,6 +248,12 @@ fn parse_host(host_xml_node vxml.Node) NmapHostNode {
 		else if child_xml_node.name == 'os' {
 			os_match_list = parse_host_os_node(child_xml_node)
 		}
+		else if child_xml_node.name == 'status' {
+			parse_host_status_node(child_xml_node)
+		}
+		else if child_xml_node.name == 'times' {
+			parse_host_times_node(child_xml_node)
+		}
 		else {
 			println('Unknown child node in host node: ${child_xml_node.name}')
 		}
@@ -251,6 +266,18 @@ fn parse_host(host_xml_node vxml.Node) NmapHostNode {
 	}
 
 	return host_node
+}
+
+fn parse_host_status_node(xml_node vxml.Node) {
+	// The NMAP host status node just says if a host is up, reason and ttl.
+	//  It is currently being omitted since I assume you are up most of the time
+
+	// println('Here is the host status node: ${xml_node}')
+}
+
+fn parse_host_times_node(xml_node vxml.Node) {
+	// 
+	// println('Here is the host times node: ${xml_node}')
 }
 
 fn parse_host_os_node(xml_node vxml.Node) []NMapOSMatchNode {
@@ -332,6 +359,9 @@ fn parse_host_ports_node(xml_node vxml.Node) []NMapPortNode {
 		if child_xml_node.name == 'port' {
 			open_ports << parse_port_node(child_xml_node)
 		}
+		// else if child_xml_node.name == 'extraports' {
+		// 	open_ports << parse_extraports_node(child_xml_node)
+		// }
 		else {
 			println('Unexpected node in ports: ${child_xml_node.name}')
 		}

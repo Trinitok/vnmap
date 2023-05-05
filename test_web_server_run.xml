@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE nmaprun>
 <?xml-stylesheet href="file:///opt/homebrew/bin//../share/nmap/nmap.xsl" type="text/xsl"?>
-<!-- Nmap 7.93 scan initiated Fri May  5 06:45:47 2023 as: nmap -p 80,443,8080 -oX test_full_run.xml scanme.nmap.org -->
-<nmaprun scanner="nmap" args="nmap -p 80,443,8080 -oX test_full_run.xml scanme.nmap.org" start="1683287147" startstr="Fri May  5 06:45:47 2023" version="7.93" xmloutputversion="1.05">
+<!-- Nmap 7.93 scan initiated Fri May  5 06:29:35 2023 as: nmap -p 80,443,8080 -oX test_web_server_run.xml scanme.nmap.org -->
+<nmaprun scanner="nmap" args="nmap -p 80,443,8080 -oX test_web_server_run.xml scanme.nmap.org" start="1683286175" startstr="Fri May  5 06:29:35 2023" version="7.93" xmloutputversion="1.05">
 <scaninfo type="syn" protocol="tcp" numservices="3" services="80,443,8080"/>
 <verbose level="0"/>
 <debugging level="0"/>
@@ -12,7 +12,7 @@
 <hostname name="scanme.nmap.org" type="user"/>
 </hostnames>
 </hosthint>
-<host starttime="1683287147" endtime="1683287147"><status state="up" reason="echo-reply" reason_ttl="41"/>
+<host starttime="1683286176" endtime="1683286176"><status state="up" reason="echo-reply" reason_ttl="41"/>
 <address addr="45.33.32.156" addrtype="ipv4"/>
 <hostnames>
 <hostname name="scanme.nmap.org" type="user"/>
@@ -22,8 +22,8 @@
 <port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="41"/><service name="https" method="table" conf="3"/></port>
 <port protocol="tcp" portid="8080"><state state="closed" reason="reset" reason_ttl="41"/><service name="http-proxy" method="table" conf="3"/></port>
 </ports>
-<times srtt="67662" rttvar="29859" to="187098"/>
+<times srtt="66504" rttvar="29597" to="184892"/>
 </host>
-<runstats><finished time="1683287147" timestr="Fri May  5 06:45:47 2023" summary="Nmap done at Fri May  5 06:45:47 2023; 1 IP address (1 host up) scanned in 0.55 seconds" elapsed="0.55" exit="success"/><hosts up="1" down="0" total="1"/>
+<runstats><finished time="1683286176" timestr="Fri May  5 06:29:36 2023" summary="Nmap done at Fri May  5 06:29:36 2023; 1 IP address (1 host up) scanned in 0.36 seconds" elapsed="0.36" exit="success"/><hosts up="1" down="0" total="1"/>
 </runstats>
 </nmaprun>
